@@ -1,0 +1,42 @@
+.button {
+    width: 167px;
+    height: 78px;
+    background-color: #fff;
+    border-radius: 20px;
+
+    position: relative;
+    overflow: hidden;
+    /* padding: 16px 20px; */
+}
+
+.button_block {
+    background-color: var(--dark-white-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.download_icon {
+    position: absolute;
+    right: 30px;
+    top: 28px;
+    cursor: pointer;
+}
+
+.text_block {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3px;
+}
+.text {
+    font-family: var(--neue-montreal-font);
+    font-size: 18px;
+}
