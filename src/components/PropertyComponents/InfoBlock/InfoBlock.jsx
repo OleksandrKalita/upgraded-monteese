@@ -9,7 +9,7 @@ import sofaIcon from "../../../../public/images/icons/sofa_icon.svg";
 import valIcon from "../../../../public/images/icons/val_icon.svg";
 import mapPointerIcon from "../../../../public/images/icons/map-pointer_icon.svg";
 
-export default function InfoBlock() {
+export default function InfoBlock({bgImage, mapIncluded}) {
     const ref = useRef(null);
     const isInView = useInView(ref, {amount: 0.5, once: true})
     const [isHovered, setHover] = useState(false);
@@ -43,13 +43,15 @@ export default function InfoBlock() {
             variants={blockAnimation}
             onMouseEnter={() => setHover(true)} 
             onMouseLeave={() => setHover(false)}>
-            <motion.div 
+            <Image src={bgImage} alt="" className={styles.bg_image}/>
+            {!mapIncluded && <motion.div 
                 className={styles.headline}
-                >Azure Heights Luxury Residences</motion.div>
+                >Azure Heights Luxury Residences
+            </motion.div>}
             <div className={styles.arrow_button}>
                 <div className={styles.arrow}></div>
             </div>
-            <motion.div className={styles.tags_block} 
+            {!mapIncluded && <motion.div className={styles.tags_block} 
                 initial="def"
                 animate={isHovered ? "hovered" : ""}
                 variants={tagsAnimation} >
@@ -94,7 +96,7 @@ export default function InfoBlock() {
                         </div>
                     </div>
                 </div>
-            </motion.div>
+            </motion.div>}
         </motion.div>
     );
 }

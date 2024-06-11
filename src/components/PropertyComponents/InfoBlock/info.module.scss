@@ -4,12 +4,13 @@
     width: 100%;
     height: 714px;
 
-    background-image: url("../../../../public/images/backgrounds/dubai-bg.jpg");
+    // background-image: url("../../../../public/images/backgrounds/dubai-bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     object-fit: cover;
     border-radius: 30px;
+    overflow: hidden;
 
     @media (max-width: 1157px) {
         height: 714px;
@@ -19,13 +20,16 @@
         .headline {
             height: 100px;
             @media (max-width: 576px) {
-                // height: 7px;
                 width: 200px;
             }
         }
     }
 }
-
+.bg_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .headline {
     font-size: 22px;
     font-weight: 600;
