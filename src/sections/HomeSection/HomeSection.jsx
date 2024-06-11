@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./section.module.scss";
+import styles from "./home.module.scss";
 import Image from "next/image";
 import { delay, motion, useInView } from "framer-motion";
 
@@ -112,15 +112,15 @@ export default function HomeSection() {
                                     initial="hidden"
                                     animate="visible"
                                     variants={buttonAnimation}>
-                                    <Image alt="" src={mapIcon}/>
+                                    <Image alt="" src={mapIcon} className={styles.button__icon}/>
                                 </motion.div>
                                 <motion.div 
                                     className={styles.button} 
-                                    style={{backgroundColor: "#F6F6F6", paddingTop: "15px"}}
+                                    style={{backgroundColor: "#F6F6F6"}}
                                     initial="hidden"
                                     animate="visible"
                                     variants={buttonAnimation}>
-                                    <Image alt="" src={menuIcon}/>
+                                    <Image alt="" src={menuIcon} className={styles.button__icon}/>
                                 </motion.div>
                             </div>
                             <motion.div 
@@ -186,7 +186,7 @@ export default function HomeSection() {
                                     initial="hidden"
                                     animate="visible"
                                     variants={buttonAnimation}>
-                                    <Image alt="" src={heartIcon}/>
+                                    <Image alt="" src={heartIcon} className={styles.button__icon}/>
                                 </motion.div>
                                 <motion.div 
                                     className={styles.button} 
@@ -194,7 +194,7 @@ export default function HomeSection() {
                                     initial="hidden"
                                     animate="visible"
                                     variants={buttonAnimation}>
-                                    <Image alt="" src={houseIcon}/>
+                                    <Image alt="" src={houseIcon} className={styles.button__icon}/>
                                 </motion.div>
                             </div>
                             <motion.div

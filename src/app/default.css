@@ -3,6 +3,8 @@
     --dark-white-color: #F6F6F6;
     --grey-color: #232323;
     --light-grey-color: rgba(255, 255, 255, 0.1);
+
+    --def-transition: all 0.4s;
 }
 * {
     padding: 0;

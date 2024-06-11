@@ -8,6 +8,7 @@ import keyIcon from "../../../public/images/icons/key-icon.svg";
 import gsap from "gsap";
 import { ScrollSmoother, ScrollTrigger } from "gsap/all";
 import { useEffect, useRef } from "react";
+import Marquee from "react-fast-marquee";
 
 export default function VideoSection() {
     const ref = useRef(null);
@@ -77,11 +78,11 @@ export default function VideoSection() {
             ScrollTrigger.create({
                 trigger: ref.current,
                 start: "top top",
-                // end: `top+=100% top`,
+                end: `top+=100% top`,
                 pin: true,
-                // pinSpacing: true,
+                pinSpacing: true,
                 scrub: true,
-                markers: true,
+                markers: false,
                 animation: animation,
             })
         })
@@ -99,15 +100,24 @@ export default function VideoSection() {
                 </div>
             </div>
             <div className={styles.video_block} ref={videoRef}>
-                <video
-                        id="video"
-                        className={styles.video}
-                        loop
-                        muted
-                        autoPlay
-                    >
-                        <source src="/video/main-viedo.mp4" />
-                </video>
+                <div className={styles.video__container}>
+                    <Marquee className={styles.marquee} speed={120}>
+                        <div className={styles.marquee_item}>installment plan up to 8 years</div>
+                        <div className={styles.marquee_item}><div className={styles.marquee_point}></div></div>
+                        <div className={styles.marquee_item}>interest-free</div>
+                        <div className={styles.marquee_item}><div className={styles.marquee_point}></div></div>
+                        <div className={styles.marquee_item}>Apartments with an initial payment from $25,000</div>
+                    </Marquee>
+                    <video
+                            id="video"
+                            className={styles.video}
+                            loop
+                            muted
+                            autoPlay
+                        >
+                            <source src="/video/main-viedo.mp4" />
+                    </video>
+                </div>
             </div>
         </div>
     );

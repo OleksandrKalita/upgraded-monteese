@@ -1,0 +1,214 @@
+.block {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 714px;
+
+    background-image: url("../../../../public/images/backgrounds/dubai-bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    border-radius: 30px;
+
+    @media (max-width: 1157px) {
+        height: 714px;
+        max-width: 660px;
+    }
+    &:hover {
+        .headline {
+            height: 100px;
+            @media (max-width: 576px) {
+                // height: 7px;
+                width: 200px;
+            }
+        }
+    }
+}
+
+.headline {
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 40px;
+    display: flex;
+    transition: all 0.4s;
+    align-items: flex-end;
+}
+
+.arrow_button {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .arrow {
+        position: relative;
+        width: 18px;
+        height: 18px;
+        border-top: 1px solid var(--grey-color);
+        border-right: 1px solid var(--grey-color);
+        transition: var(--def-transition);
+        &::before {
+            content: "";
+            position: absolute;
+            top: 8px;
+            right: -4px;
+            width: 144%;
+            height: 1px;
+            transform: rotate(-45deg);
+            background-color: var(--grey-color);
+        }
+    }
+
+    &:hover {
+        .arrow {
+            transform: translate(3px, -3px);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+.tags_block {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    
+    transition: var(--def-transition);
+    @media (max-width: 576px) {
+        bottom: 15px;
+    }
+}
+
+.bottom_block {
+    display: scroll;
+    width: 100%;
+    overflow: auto;
+}
+.tag_list {
+    display: flex;
+    column-gap: 4px;
+    width: max-content;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.tag {
+    width: 113px;
+    height: 82px;
+    border-radius: 18.32px;
+    background-color: #fff;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.tag__title {
+    font-size: 12px;
+    color: rgb(46,47,48,0.5);
+}
+.tag__content {
+    display: flex;
+    column-gap: 16px;
+}
+.content__text {
+    font-size: 16px;
+    color: black;
+}
+
+
+.top_block {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0px 40px;
+}
+.top__tag {
+    height: 73px;
+    width: 169px;
+    align-items: center;
+    display: flex;
+    column-gap: 12px;
+    padding: 25px 0px 25px 20px;
+    border-radius: 18.32px;
+    background-color: var(--primary-color);
+}
+
+
+
+
+@media (max-width: 576px) {
+    .block {
+        height: 418px;
+    }
+    .headline {
+        font-size: 18px;
+        padding: 15px;
+    }
+    .arrow_button {
+        width: 34px;
+        height: 34px;
+        top: 15px;
+        right: 15px;
+        .arrow {
+            width: 12px;
+            height: 12px;
+            &::before {
+                top: 5px;
+                right: -3px;
+            }
+        }
+    }
+    .tag {
+        width: 95px;
+        height: 56px;
+        border-radius: 10px;
+        background-color: #fff;
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .tag__title {
+        font-size: 10px;
+        color: rgb(46,47,48,0.5);
+    }
+    .tag__content {
+        display: flex;
+        column-gap: 14px;
+    }
+    .content__text {
+        font-size: 14px;
+        color: black;
+    }
+    .tag_list {
+        display: flex;
+        column-gap: 8px;
+        width: max-content;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .top_block {
+        opacity: 0;
+        transition: var(--def-transition);
+    }
+}
