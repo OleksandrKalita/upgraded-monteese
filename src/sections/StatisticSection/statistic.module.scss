@@ -1,0 +1,246 @@
+.main {
+
+}
+.main__container {
+    max-width: 1400px;
+    padding: 40px 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: calc(50% - 20px) calc(50% - 20px);
+    grid-template-rows: auto 1fr;
+    column-gap: 40px;
+    row-gap: 40px;
+}
+
+
+// - - - - - -  Text Block  - - - - - -
+.text_block {
+    grid-column: 1;
+    grid-row: 1;
+}
+.text_block__content {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    @media (max-width: 768px) {
+        row-gap: 40px;
+    }
+}
+.text {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+    line-height: 130%;
+}
+.team_banner {
+    display: flex;
+    column-gap: 18px;
+    align-items: center;
+}
+.banner__list {
+    position: relative;
+    width: 186px;
+    height: 60px;
+}
+.list_item {
+    position: absolute;
+}
+.avatar_2 {
+    transform: translate(42px, 0px);
+}
+.avatar_3 {
+    transform: translate(84px, 0px);
+}
+.avatar_4 {
+    transform: translate(126px, 0px);
+}
+
+.banner__headline {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+
+.statisctic_block {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+// - - - - - -  Image Block  - - - - - -
+.image_block {
+    grid-column: 2;
+    grid-row: 1/3;
+}
+
+.image_block__container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+}
+.bg_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contact_button_block {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+.image_headline {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 1;
+    scale: 1;
+    transition: var(--def-transition);
+    @media (max-width: 1250px) {
+        opacity: 0;
+        scale: 0.4;
+    }
+}
+
+
+.offer_block {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    row-gap: 10px;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.help_button {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification_box {
+    width: 310px;
+    height: 98px;
+    border-radius: 30px;
+    background-color: #fff;
+    padding: 10px 10px 10px 20px;
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+.avatar_box {
+    min-width: 60px;
+    min-height: 60px;
+    position: relative;
+}
+.avatar_icon {
+    width: 100%;
+    height: 100%;
+}
+.avatar_marker {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 4px solid var(--grey-color);
+    background-color: #fff;
+}
+.box__content {
+    
+}
+.box__title {
+    font-size: 12px;
+    color: rgba(23, 23, 23, 0.5);
+}
+.box_text {
+    font-size: 18px;
+    color: var(--grey-color);
+}
+
+
+
+@media (max-width: 1126px) {
+
+}
+@media (max-width: 950px) {
+    .main__container {
+        padding: 80px 15px;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        // column-gap: 40px;
+        // row-gap: 40px;
+    }
+    .text_block {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .statisctic_block {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .image_block {
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+@media (max-width: 565px) {
+    .contact_button_block {
+        top: 15px;
+        right: 15px;
+    }
+
+    .offer_block {
+        bottom: 15px;
+        right: 15px;
+        row-gap: 10px;
+    }
+    
+    .help_button {
+        width: 28px;
+        height: 28px;
+    }
+    .help_icon {
+        width: 12px;
+        height: 12px;
+    }
+    
+    .notification_box {
+        width: 230px;
+        height: 69px;
+        border-radius: 20px;
+        padding: 10px 9px 9px 9px;
+        column-gap: 11px;
+    }
+    .avatar_box {
+        min-width: 50px;
+        min-height: 50px;
+    }
+    .avatar_marker {
+        width: 12px;
+        height: 12px;
+        border: 4px solid var(--grey-color);
+    }
+    .box__content {
+        
+    }
+    .box__title {
+        font-size: 10px;
+    }
+    .box_text {
+        font-size: 14px;
+    }
+}

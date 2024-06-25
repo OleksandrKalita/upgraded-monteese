@@ -1,10 +1,13 @@
 import styles from "./property.module.scss";
 import Image from "next/image";
 
+import {motion, useInView} from "framer-motion";
+
 import youtubeIcon from "../../../public/images/icons/soc_icons/youtube_icon.svg";
 import instagramIcon from "../../../public/images/icons/soc_icons/instagram_icon.svg";
 import tiktokIcon from "../../../public/images/icons/soc_icons/tiktok_icon.svg";
 import ContentBlock from "../../components/PropertyComponents/ContentBlock/ContentBlock";
+
 
 export default function PropertySection() {
     return (
@@ -31,9 +34,7 @@ export default function PropertySection() {
                 <ContentBlock/>
 
                 <div className={styles.footer_block}>
-                    <button className={styles.property_button}>
-                        <span className={styles.button__text}>All Properties</span>
-                    </button>
+                    <div className={styles.prop_button}>All Properties</div>
                     <div className={styles.social_block}>
                         <div className={styles.social__text}>Don&apos;t Miss Out on Hot Deals!<br/> Follow Us on Social Media</div>
                         <nav className={styles.social__links}>

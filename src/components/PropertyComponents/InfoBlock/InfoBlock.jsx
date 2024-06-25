@@ -97,6 +97,7 @@ export default function InfoBlock({bgImage, mapIncluded}) {
                     </div>
                 </div>
             </motion.div>}
+            {mapIncluded && <div className={styles.find_button}>Find On The Map</div>}
         </motion.div>
     );
 }

@@ -1,7 +1,6 @@
 .contact_button {
     position: relative;
     padding: 11px 20px 12px 51px;
-    background-color: #000;
     border-radius: 80px;
     overflow: hidden;
     cursor: pointer;
@@ -15,10 +14,8 @@
     border-radius: 80px;
     text-align: center;
     padding-top: 8px;
-    background-color: var(--primary-color);
 }
 .button_text {
     font-family: var(--neue-montreal-font);
     font-size: 18px;
-    color: #fff;
 }

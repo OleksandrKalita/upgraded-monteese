@@ -128,7 +128,7 @@ export default function HomeSection() {
                                 initial="hidden"
                                 animate={"visible"}
                                 variants={contactButtonAnimation}>
-                                <ContactButton/>
+                                <ContactButton theme={"dark"}/>
                             </motion.div>
                             <div className={styles.headline_block}>
                                 <div className={styles.headline}>

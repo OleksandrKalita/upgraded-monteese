@@ -18,8 +18,10 @@
     }
     &:hover {
         .headline {
-            height: 100px;
+            height: 110px;
+            width: 300px;
             @media (max-width: 576px) {
+                height: 75px;
                 width: 200px;
             }
         }
@@ -157,7 +159,16 @@
     background-color: var(--primary-color);
 }
 
-
+.find_button {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    font-size: 18px;
+    color: black;
+    padding: 15px 20px;
+    background-color: #fff;
+    border-radius: 80px;
+}
 
 
 @media (max-width: 576px) {
@@ -214,5 +225,11 @@
     .top_block {
         opacity: 0;
         transition: var(--def-transition);
+    }
+    .find_button {
+        top: 15px;
+        left: 15px;
+        font-size: 14px;
+        padding: 8px;
     }
 }

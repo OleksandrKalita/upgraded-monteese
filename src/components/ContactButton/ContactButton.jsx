@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import phoneIcon from "../../../public/images/icons/phone-icon.svg";
 import { useState } from "react";
 
-export default function ContactButton() {
+export default function ContactButton({theme}) {
     const [isHovered, setHovered] = useState(false);
 
     const buttonAnimation = {
@@ -21,16 +21,22 @@ export default function ContactButton() {
         }
     }
     return (
-        <motion.div className={styles.contact_button}>
-                <motion.div 
-                    className={styles.internal_button}
-                    animate={isHovered ? "hovered" : ""}
-                    variants={buttonAnimation}
-                    onMouseEnter={() => setHovered(true)}
-                    onMouseLeave={() => setHovered(false)}>
-                    <Image alt="" src={phoneIcon}/>
-                </motion.div> 
-            <div className={styles.button_text}>Contact Us Now</div>
+        <motion.div 
+            className={styles.contact_button}
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            style={{backgroundColor: theme === "dark" ? "#000" : "#D5E7EE"}}>
+            <motion.div 
+                className={styles.internal_button}
+                animate={isHovered ? "hovered" : ""}
+                variants={buttonAnimation}
+                style={{backgroundColor: theme === "dark" ? "var(--primary-color)" : "#fff"}}>
+                <Image alt="" src={phoneIcon}/>
+            </motion.div> 
+            <div 
+                className={styles.button_text}
+                style={{color: theme === "dark" ? "#fff" : "#000"}}
+                >Contact Us Now</div>
         </motion.div>
     );
 }

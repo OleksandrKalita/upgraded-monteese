@@ -1,0 +1,139 @@
+.main {
+    background-color: var(--grey-color);
+}
+.main__container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+}
+
+.headline_block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.headline {
+    font-size: 56px;
+    color: #fff;
+}
+.explore_link {
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+}
+.link__point {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+}
+.link_text {
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.link_arrow {
+    width: 15px;
+    height: 15px;
+    border-top: 1px solid var(--primary-color);
+    border-right: 1px solid var(--primary-color);
+    position: relative;
+    transform: rotate(45deg);
+    &::before {
+        content: '';
+        position: absolute;
+        top: 3.8px;
+        right: -3px;
+        width: 15px;
+        height: 1px;
+        background-color: var(--primary-color);
+        transform: rotate(-45deg);
+    }
+}
+
+
+
+.menu_block {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    // position: relative;
+}
+.menu__item {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+
+    width: 660px;
+    height: 120px;
+    border-radius: 80px;
+    background-color: #fff;
+    padding: 0px 10px;
+
+    display: flex;
+    align-items: center;
+    
+}
+.item_1 {
+    z-index: 4;
+}
+.item_2,
+.item_3,
+.item_4 {
+    transform: translate(0px, -140px);
+    opacity: 0;
+    scale: 0.7;
+    // z-index: inherit;
+}
+.item_2 {
+    z-index: 3;
+}
+.item_3 {
+    z-index: 2;
+}
+.item_4 {
+    z-index: 1;
+}
+.image_box {
+    border-radius: 50%;
+    overflow: hidden;
+}
+.text_box {
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;  
+}
+.text {
+    font-size: 28px;
+}
+.number_tag {
+
+
+}
+
+.arrow_box {
+    width: 78px;
+    height: 78px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.4s;
+    &:hover {
+        background-color: var(--primary-color);
+    }
+}
+
+
+.marquee_item {
+    font-size: 82px;
+    color: var(--grey-color);
+    padding: 11px 40px;
+    border-radius: 80px;
+    background-color: var(--light-grey-color);
+    margin: 0 20px;
+}
