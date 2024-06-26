@@ -5,6 +5,7 @@ import VideoSection from "@/sections/VideoSection/VideoSection";
 import PropertySection from "@/sections/PropertySection/PropertySection";
 import StatisticSection from "@/sections/StatisticSection/StatisticSection";
 import SolutionsSection from "@/sections/SolutionsSection/SolutionsSection";
+import CirclesAnimationSection from "@/sections/CirclesAnimationSection/CirclesAnimationSection";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <PropertySection/>
       <StatisticSection/>
       <SolutionsSection/>
+      <CirclesAnimationSection/>
     </main>
   );
 }

@@ -29,20 +29,7 @@ export default function SolutionsSection() {
     gsap.registerPlugin(ScrollTrigger);
 
     useEffect(() => {
-        // const observer = new IntersectionObserver(([entry], observer) => {
-        //     if (entry.isIntersecting) {
-        //         console.log(entry.target);
-        //         setIsVisible(true);
-        //         observer.disconnect();
-        //     }
-        // }, 
-        // {
-        //     rootMargin: "10px"
-        // })
 
-        // if (bannerRef1.current) {
-        //     observer.observe(bannerRef1.current);
-        // }
         const ctx = gsap.context(() => {
             // const animation = gsap.to(bannerRef2.current, {
             //     opacity: 1, scale: 1,
