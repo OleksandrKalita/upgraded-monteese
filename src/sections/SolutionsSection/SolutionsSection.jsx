@@ -69,7 +69,7 @@ export default function SolutionsSection() {
     }
     return (
         <div className={styles.main}>
-            <div className={styles.main__container} ref={ref}>
+            <div className={styles.main__container} >
                 <div className={styles.headline_block}>
                     <div className={styles.headline}>Tailored Solutions for Your Real Estate Needs</div>
                     <div className={styles.explore_link}>
