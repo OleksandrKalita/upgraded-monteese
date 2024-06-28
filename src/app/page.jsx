@@ -15,8 +15,8 @@ export default function Home() {
       <PropertySection/>
       <StatisticSection/>
       <SolutionsSection/>
-      {/* <div className={styles.box}></div> */}
       <CirclesAnimationSection/>
+      <PropertySection/>
     </main>
   );
 }
